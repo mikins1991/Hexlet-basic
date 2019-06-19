@@ -1,0 +1,29 @@
+const smallestDivisor = (num) => {
+  // BEGIN (write your solution here)
+  const iter = (counter, acc) => {
+    if (counter % acc === 0) {
+      return acc;
+    }
+    if (counter === 1) {
+      return 1;
+    }
+     return iter (counter, acc + 1);
+  }
+  return iter (num, 2);
+  // END
+};
+// решение учителя
+ const iter = (acc) => {
+    // We use 'num / 2' in the condition below, and not 'num'.
+    // This is a simple optimization: a number cannot be divided
+    // by a number larger than its half.
+    if (acc > num / 2) {
+      return num;
+    }
+    if (num % acc === 0) {
+      return acc;
+    }
+    return iter(acc + 1);
+  };
+
+  return iter(2);
