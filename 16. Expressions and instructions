@@ -1,0 +1,20 @@
+const square = (num) => {
+  return num * num;
+};
+
+const sumOfSquares = (num, acc) => {
+  return num * num + acc * acc;
+};
+
+const squareSumOfSquares = (num, acc) => {
+  return (num * num + acc * acc) * (num * num + acc * acc);
+};
+
+//решение учителя
+const square = num => num * num;
+
+const sumOfSquares = (num1, num2) =>
+  square(num1) + square(num2);
+
+const squareSumOfSquares = (num1, num2) =>
+  square(sumOfSquares(num1, num2));
