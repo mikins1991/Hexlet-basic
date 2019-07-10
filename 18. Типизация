@@ -1,0 +1,10 @@
+const addDigits = (num) => {
+  const str = num.toString();
+  let result = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    const number = Number(str[i]);
+    result += number;
+  }
+  return result < 10 ? result : addDigits(result);
+};
+export default addDigits;
