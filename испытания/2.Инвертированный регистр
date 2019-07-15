@@ -1,0 +1,29 @@
+const invertCase = (str) => {
+  // let num = str.length;
+  let result = '';
+  for (let i = 0; i < str.length; i += 1) {
+    let letter = str[i];
+    if (letter === letter.toUpperCase()) {
+      letter = letter.toLowerCase();
+    } else {
+      letter = letter.toUpperCase();
+    }
+    result += letter;
+  }
+  return result;
+};
+
+//решение 2
+const invertCase = (str) => {
+
+  let result = '';
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === str[i].toLowerCase()) {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i].toLowerCase();
+    }
+  }
+  return result;
+
+};
