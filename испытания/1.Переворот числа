@@ -1,0 +1,11 @@
+const revers = (num) => {
+  let result = 0;
+  let negative = (num < 0) ? true : false;
+  let number = Math.abs(num);
+  while (number) {
+    result = result * 10 + number % 10;
+    number = Math.floor(number / 10);
+  }
+  return negative ? -result : result;
+};
+revers(-1234556224);
