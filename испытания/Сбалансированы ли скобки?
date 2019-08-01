@@ -1,0 +1,13 @@
+const areBracketsBalanced = (str) => {
+
+  let result = 1;
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === '(') {
+      result += 1;
+    } else if (str[i] === ')') {
+      result -= 1;
+    }
+  }
+  return result === 1 ? true : false;
+};
+areBracketsBalanced('(())');
